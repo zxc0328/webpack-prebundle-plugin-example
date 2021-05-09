@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { Button, Input } from 'antd'
 import {
   decrement,
   increment,
@@ -20,47 +21,47 @@ export function Counter() {
   return (
     <div>
       <div className={styles.row}>
-        <button
+        <Button
           className={styles.button}
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
-          -
-        </button>
+          -sssssss
+        </Button>
         <span className={styles.value}>{count}</span>
-        <button
+        <Button
           className={styles.button}
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
         >
-          +
-        </button>
+          +wwsssfwef
+        </Button>
       </div>
       <div className={styles.row}>
-        <input
+        <Input
           className={styles.textbox}
           aria-label="Set increment amount"
           value={incrementAmount}
           onChange={(e) => setIncrementAmount(e.target.value)}
         />
-        <button
+        <Button
           className={styles.button}
           onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
           Add Amount
-        </button>
-        <button
+        </Button>
+        <Button
           className={styles.asyncButton}
           onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
-        </button>
-        <button
+        </Button>
+        <Button
           className={styles.button}
           onClick={() => dispatch(incrementIfOdd(incrementValue))}
         >
           Add If Odd
-        </button>
+        </Button>
       </div>
     </div>
   );
